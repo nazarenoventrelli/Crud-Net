@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Gestor De Personas </title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/estilosGestorDePersonas.css" rel="stylesheet">
+  
+    <script src="~/js/jquery-3.3.1.js"></script>
+    <script src="~/js/jquery.blockUI.js"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <link href="~/css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/mensajes.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="row justify-content-md-center">
+      <img src="img/banner.png" width=450 height=250>
+    </div>
+
+</header>
+    <main>
+    
+        <nav class="row justify-content-md-center">
+            <div class="btn-group btn-group-xs  ">
+           <button class="btn btn-secondary" id ="btn_agregar">Agregar Persona</button>
+           <button class="btn btn-secondary" id="btn_ver">Ver Listado</button>
+           </div>
+        </nav>
+        <section>
+            <div class="alert alert-info" id="contenedorAlerta" role="alert">
+                <strong id="msjeAlerta"></strong>
+            </div>
+        </section>
+            <section class="contenedorPrincipal">
+                @RenderBody()
+            </section>
+
+        </main>
+   
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿.contenedorPrincipal{
+    margin-top:5%;
+}
+#formularioAlta,#formularioModificar{
+	margin-left:30%;
+}
+#listado{
+	margin-left:20%;
+}
+.buscador{
+    border-bottom:15px;
+    padding-bottom:15px;
+}
+button{
+    margin-left:15px;
+}
+label{
+	margin-left:10px;
+	margin-right:10px;
+}
+
+table{
+	padding-top:15px;
+}
+
+input{
+	margin-left:10px;
+}
+.error{
+	border: 3px solid red;
+}
+.alert{
+    position: fixed;
+    top: 90%;
+    left: 5%;
+    width: 300px;
+    opacity:0;
+}

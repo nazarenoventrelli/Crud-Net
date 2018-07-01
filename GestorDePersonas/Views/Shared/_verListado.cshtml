@@ -1,0 +1,42 @@
+﻿@using GestorDePersonas.Models
+@model List<Persona>
+<article id="listado">
+    <div class="buscador row">
+        <div class="form-inline">
+            <div class="form-group">
+                <label>Nombre   <input type="text" class="form-control" id="buscar_nom" value=""></label>
+            </div>
+            <div class="form-group">
+                <label>Apellido<input type="text" class="form-control" id="buscar_ap" value=""></label>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success" id="btn_buscar">Buscar </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <table class="table table-striped">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Fecha de alta</th>
+                    <th>Modificar/Borrar</th>
+                </tr>
+
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.getNombre()</td>
+                        <td>@p.getApellido()</td>
+                        <td>@p.getEdad()</td>
+                        <td>@p.getFechaAlta().ToString("dd/MM/yyyy")</td>
+                        <td><button class="btn btn-success btn_modificar" value="@p.getCod()">Modificar</button><button class="btn btn-danger btn_borrar" value="@p.getCod()">Borrar</button></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</article>
+<script src="~/js/verListado.js"></script>

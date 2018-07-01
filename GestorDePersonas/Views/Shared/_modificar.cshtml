@@ -1,0 +1,39 @@
+﻿@using GestorDePersonas.Models
+@model Persona
+<article id="formularioModificar">
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Cod</label>
+            <input type="text" class="form-control" id="txtMod_cod" value="@Model.getCod()" readonly='readonly'>
+        </div>
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" id="txtMod_nombre" value="@Model.getNombre()">
+        </div>
+        <div class="form-group">
+            <label>Apellido</label>
+            <input type="text" class="form-control" id="txtMod_apellido" value="@Model.getApellido()">
+        </div>
+        <div class="form-group">
+            <label>Edad</label>
+            <input type="text" class="form-control" id="txtMod_edad" value="@Model.getEdad()">
+        </div>
+        <div class="form-group">
+            <label>Fecha de alta</label>
+            <input type="text" class="form-control" id="datepicker" value="@Model.getFechaAlta().ToString("dd/MM/yyyy")">
+        </div>
+
+        <div class="form-inline">
+            <div class="form-group">
+                <button class="btn btn-success" id="btn_modificar">Modificar</button>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-danger" id="btn_cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</article>
+<script src="~/js/modificar.js"></script>
